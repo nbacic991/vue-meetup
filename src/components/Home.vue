@@ -16,7 +16,8 @@
           :src="meetup.imageUrl" 
           :key="meetup.id">
           <div class="title">
-            {{ meetup.title }}
+            <p>{{ meetup.title }}</p>
+            <v-btn dark @click="onLoadMeetup(meetup.id)">See the details</v-btn>
           </div>
           </v-carousel-item>
         </v-carousel>
@@ -38,6 +39,12 @@ export default {
         { imageUrl: 'https://cdn.pixabay.com/photo/2016/01/19/17/59/new-york-city-1150012_960_720.jpg', id: 'dasdasdasdas', title: 'Meetup in New York' },
         { imageUrl: 'https://cdn.pixabay.com/photo/2017/07/13/03/15/paris-2499022_960_720.jpg', id: 'dsdarerweewr', title: 'Meetup in Paris' }
       ]
+    }
+  },
+  methods: {
+    onLoadMeetup (id) {
+      this.$router.push('/meetups/' + id)
+      console.log('CLICKED')
     }
   }
 }
