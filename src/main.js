@@ -43,5 +43,6 @@ new Vue({
       projectId: 'meetupproject-b380c',
       storageBucket: 'meetupproject-b380c.appspot.com'
     })
+    this.$store.dispatch('loadMeetups')
   }
 })
