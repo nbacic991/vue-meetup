@@ -18,4 +18,5 @@ npm run build
 npm run build --report
 ```
 
-## Live demo *https://vue-meetup.herokuapp.com/#/*
+## Live demo 
+*https://vue-meetup.herokuapp.com/#/*
